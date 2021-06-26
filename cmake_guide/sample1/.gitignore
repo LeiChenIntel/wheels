@@ -1,0 +1,7 @@
+# Ignore build folders/files
+/.vs
+/out
+/build*
+
+# Ignore CMake related files
+CMakeSettings.json
