@@ -2,7 +2,7 @@
 #include <iostream>
 
 int main() {
-	std::cout << "CMake Sample 2:" << std::endl;
+	std::cout << "CMake Sample 3:" << std::endl;
 	std::cout << "Add value : " << add(1.2, 3.5) << std::endl;
 	std::cout << "Subtract value: " << subtract(1.2, 3.4) << std::endl;
 	std::cout << "Multiple value: " << multiple(1.2, 3.4) << std::endl;

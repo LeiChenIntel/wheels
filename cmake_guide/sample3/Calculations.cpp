@@ -1,7 +1,7 @@
 #include "Calculations.h"
 #include <iostream>
 
-CALCULATIONS_API int calFlag = 1;
+int calFlag = 1;
 
 float add(float value1, float value2) {
 	return value1 + value2;
