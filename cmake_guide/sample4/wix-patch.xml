@@ -1,0 +1,13 @@
+<CPackWiXPatch>
+	<CPackWiXFragment Id="CM_CP_bin.sample4.exe">
+		<Environment Id="SAMPLE4_DIR" Action="set" 
+			Name="SAMPLE4_DIR" Value="[INSTALL_ROOT]"/>
+
+		<Environment Id="CALCULATIONS_LIB_DIR" Action="set" 
+			Name="CALCULATIONS_LIB_DIR" Value="[INSTALL_ROOT]lib"/>
+
+		<Environment Id="CALCULATIONS_BIN_DIR" Action="set" Part="first"
+			Name="PATH" Value="[INSTALL_ROOT]bin"
+			System="yes"/>
+	</CPackWiXFragment>
+</CPackWiXPatch>
