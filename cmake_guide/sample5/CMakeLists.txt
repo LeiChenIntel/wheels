@@ -39,6 +39,14 @@ if(ADD_OPENCV AND ADD_OPENCV_LIB_MANUAL)
 	target_link_libraries(sample5 optimized opencv_world452)
 endif()
 
+if(ADD_OPENCV AND ADD_OPENCV_LIB_AUTO)
+	message("Link OpenCV build library via OpenCVConfig.cmake")
+	add_definitions(-D LINK_OPENCV_LIB_AUTO)
+	find_package(OpenCV REQUIRED)
+	include_directories(sample5 ${OpenCV_INCLUDE_DIRS})
+	target_link_libraries(sample5 ${OpenCV_LIBS})
+endif()
+
 # set install path
 if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 	set(CMAKE_INSTALL_PREFIX "${PROJECT_SOURCE_DIR}/install")
