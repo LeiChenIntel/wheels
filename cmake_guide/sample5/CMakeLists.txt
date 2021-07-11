@@ -35,6 +35,7 @@ if(ADD_OPENCV AND ADD_OPENCV_LIB_MANUAL)
 	set(OPENCV_LIB_DIR $ENV{OPENCV_DIR}/build/x64/vc15/lib)
 	target_include_directories(sample5 PUBLIC ${OPENCV_INC_DIR})
 	target_link_directories(sample5 PUBLIC ${OPENCV_LIB_DIR})
+	# project can change lib automatically with debug and release mode
 	target_link_libraries(sample5 debug opencv_world452d)
 	target_link_libraries(sample5 optimized opencv_world452)
 endif()
