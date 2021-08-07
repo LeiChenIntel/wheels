@@ -9,14 +9,14 @@ message("PROJECT_NAME: " ${PROJECT_NAME})
 # set C++ standard
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+# Use /MD instead of /MT in googletest
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
 # add calculations static library
 add_library(calculations STATIC Calculations.h Calculations.cpp)
 
 # add google test
 add_subdirectory(thirdparty/googletest)
-# Use /MD instead of /MT in googletest
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
 # add the executable
 add_executable(sample6_unittest sample6_unittest.cpp)
