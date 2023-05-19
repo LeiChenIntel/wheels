@@ -6,7 +6,7 @@
 int main(int argc, char* argv[]) {
 	std::cout << "CMake Sample 5:" << std::endl;
 	if (argc != 2) {
-		std::cout << "Usage: " << argv[0] << "PathToImage" << std::endl;
+		std::cout << "Usage: " << argv[0] << " PathToImage " << std::endl;
 		return -1;
 	}
 	

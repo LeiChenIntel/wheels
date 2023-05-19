@@ -1,10 +1,14 @@
 #ifndef CALCULATIONS_H
 #define CALCULATIONS_H
 
+#ifdef _WIN32
 #ifdef calculations_EXPORTS
 #define CALCULATIONS_API __declspec(dllexport)
 #else
 #define CALCULATIONS_API __declspec(dllimport)
+#endif
+#else
+#define CALCULATIONS_API
 #endif
 
 extern CALCULATIONS_API int calFlag;
