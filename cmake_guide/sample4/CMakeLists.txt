@@ -27,16 +27,16 @@ target_include_directories(sample4 PUBLIC ${PROJECT_SOURCE_DIR})
 target_link_libraries(sample4 PUBLIC calculations)
 
 # set install path
-if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
-	set(CMAKE_INSTALL_PREFIX "${PROJECT_SOURCE_DIR}/install")
-endif()
+if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+    set(CMAKE_INSTALL_PREFIX "${PROJECT_SOURCE_DIR}/install")
+endif ()
 message("Install prefix: " ${CMAKE_INSTALL_PREFIX})
 
 # copy and relocate files
 install(TARGETS sample4 calculations
-	RUNTIME DESTINATION bin # executable file
-	LIBRARY DESTINATION bin # dynamic library
-	ARCHIVE DESTINATION lib)# static library
+        RUNTIME DESTINATION bin # executable file
+        LIBRARY DESTINATION bin # dynamic library
+        ARCHIVE DESTINATION lib)# static library
 install(FILES calculations.h DESTINATION include)
 install(FILES config.json DESTINATION config)
 

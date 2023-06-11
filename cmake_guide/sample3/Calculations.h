@@ -18,4 +18,4 @@ CALCULATIONS_API float subtract(float value1, float value2);
 CALCULATIONS_API float multiple(float value1, float value2);
 CALCULATIONS_API float divide(float value1, float value2);
 
-#endif // !CALCULATIONS_H
+#endif  // !CALCULATIONS_H
